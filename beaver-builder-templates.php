@@ -7,8 +7,8 @@
  * Author:              WPZOOM
  * Author URI:          http://wpzoom.com/
  * Text Domain:         bb-templates
- * License:             GNU General Public License v3
- * License URI:         http://www.gnu.org/licenses/gpl-3.0.txt
+ * License:             GNU General Public License v2
+ * License URI:         http://www.gnu.org/licenses/gpl-2.0.txt
  * Requires at least:   5.2
  * Tested up to:        5.7
  *
