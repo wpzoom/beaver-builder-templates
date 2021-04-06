@@ -144,7 +144,7 @@ final class WPZOOM_Beaver_Builder_Templates {
 	public static function get_template_files( $scope = '' ) {
 		$template_files        = array();
 		$folder_name           = 'theme' === $scope ? self::$theme : 'global';
-		$theme_setup_file_path = apply_filters( "wpzoom/bb-templates/${scope}/theme_setup_file_path", trailingslashit( self::$templates_path . $folder_name ) . 'setup.php' );
+		$theme_setup_file_path = apply_filters( "wpzoom/bb-templates/{$scope}/theme_setup_file_path", trailingslashit( self::$templates_path . $folder_name ) . 'setup.php' );
 
 		if ( file_exists( $theme_setup_file_path ) ) {
 			// This file has to contain some `$template_files = array(...);` code!
