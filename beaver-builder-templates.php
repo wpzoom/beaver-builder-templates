@@ -1,11 +1,11 @@
 <?php
 /**
  * Plugin Name:         Beaver Builder Templates by WPZOOM
- * Plugin URI:          http://wordpress.org/plugins/beaver-builder-templates-by-wpzoom/
- * Description:         This plugin provides a collection of custom Beaver Builder page builder templates for WordPress themes (especially the accessibility ready themes by WPZOOM).
+ * Plugin URI:          https://wordpress.org/plugins/beaver-builder-templates-by-wpzoom/
+ * Description:         This plugin provides a collection of custom Beaver Builder page builder templates for WordPress themes (especially for WPZOOM themes).
  * Version:             1.0.0
  * Author:              WPZOOM
- * Author URI:          http://wpzoom.com/
+ * Author URI:          https://www.wpzoom.com/
  * Text Domain:         bb-templates
  * License:             GNU General Public License v2
  * License URI:         http://www.gnu.org/licenses/gpl-2.0.txt
