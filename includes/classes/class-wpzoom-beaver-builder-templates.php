@@ -86,21 +86,43 @@ final class WPZOOM_Beaver_Builder_Templates {
 	 * @return void
 	 */
 	public static function register_templates() {
-		$template_files = self::get_template_files( self::$theme );
+		$global_templates = self::get_template_files( 'global' );
+		$theme_templates  = self::get_template_files( 'theme' );
 
 		/**
-		 * Filter before register Beaver Builder Templates.
+		 * Filter before register Beaver Builder Templates globally.
 		 *
 		 * @since 1.0.0
-		 * @param array $template_files The templates files to be registerd
+		 * @param array $global_templates The templates files to be registerd
 		 */
-		$templates = apply_filters( 'wpzoom/bb-templates/before-register-templates', $template_files );
+		$global_templates = apply_filters( 'wpzoom/bb-templates/global/before-register-templates', $global_templates );
 
-		if ( self::theme_supports() && ! empty( $templates ) ) {
-			foreach ( $templates as $file ) {
+		if ( self::global_supports() && ! empty( $global_templates ) ) {
+			foreach ( $global_templates as $file ) {
+				$file = trailingslashit( self::$templates_path . 'global' ) . $file;
+				$file = apply_filters( 'wpzoom/bb-templates/global/template_file', $file );
+
+				if ( file_exists( $file ) ) {
+					/* @phpstan-ignore-next-line */
+					FLBuilder::register_templates( $file );
+				}
+			}
+		}
+
+		/**
+		 * Filter before register Beaver Builder Templates for specified theme.
+		 *
+		 * @since 1.0.0
+		 * @param array $theme_templates The templates files to be registerd
+		 */
+		/* @phpstan-ignore-next-line */
+		$theme_templates = apply_filters( 'wpzoom/bb-templates/theme/before-register-templates', $theme_templates, self::$theme );
+
+		if ( ! empty( $theme_templates ) ) {
+			foreach ( $theme_templates as $file ) {
 				$file = trailingslashit( self::$templates_path . self::$theme ) . $file;
 				/* @phpstan-ignore-next-line */
-				$file = apply_filters( 'wpzoom/bb-templates/template_file', $file, self::$theme );
+				$file = apply_filters( 'wpzoom/bb-templates/theme/template_file', $file, self::$theme );
 
 				if ( file_exists( $file ) ) {
 					/* @phpstan-ignore-next-line */
@@ -113,15 +135,16 @@ final class WPZOOM_Beaver_Builder_Templates {
 	/**
 	 * Get template files array
 	 *
-	 * By default return template files array of the current theme if exits.
+	 * By default returns template files array globally.
 	 *
 	 * @since 1.0.0
-	 * @param string $theme The theme name to get templates for.
+	 * @param string $scope The theme name to get templates for.
 	 * @return array
 	 */
-	public static function get_template_files( $theme ) {
+	public static function get_template_files( $scope = '' ) {
 		$template_files        = array();
-		$theme_setup_file_path = apply_filters( 'wpzoom/bb-templates/theme_setup_file_path', trailingslashit( self::$templates_path . self::$theme ) . 'setup.php' );
+		$folder_name           = 'theme' === $scope ? self::$theme : 'global';
+		$theme_setup_file_path = apply_filters( "wpzoom/bb-templates/${scope}/theme_setup_file_path", trailingslashit( self::$templates_path . $folder_name ) . 'setup.php' );
 
 		if ( file_exists( $theme_setup_file_path ) ) {
 			// This file has to contain some `$template_files = array(...);` code!
@@ -132,12 +155,19 @@ final class WPZOOM_Beaver_Builder_Templates {
 	}
 
 	/**
-	 * Check current theme support Beaver Builder Templates
+	 * Check global theme support Beaver Builder Templates
 	 *
 	 * @return bool
 	 */
-	public static function theme_supports() {
-		return current_theme_supports( 'wpzoom-beaver-builder-templates' );
+	public static function global_supports() {
+		$return          = true;
+		$theme_templates = self::get_template_files( 'theme' );
+
+		if ( ! empty( $theme_templates ) && ! current_theme_supports( 'wpzoom-beaver-builder-templates' ) ) {
+			$return = false;
+		}
+
+		return $return;
 	}
 }
 
