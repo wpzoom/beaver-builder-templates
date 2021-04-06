@@ -1,0 +1,11 @@
+includes:
+    - vendor/szepeviktor/phpstan-wordpress/extension.neon
+parameters:
+    level: max
+    bootstrapFiles:
+        - beaver-builder-templates.php
+    paths:
+        - beaver-builder-templates.php
+        - includes/classes
+        - templates
+    checkMissingIterableValueType: false
