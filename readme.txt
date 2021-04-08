@@ -55,7 +55,7 @@ You only need to have the [**Beaver Builder** page builder](https://www.wpbeaver
 
 The WPZOOM Beaver Builder Templates is built to work great with all the themes.
 
-= Will the Ultimate Addons slow down my website? =
+= Will the WPZOOM Beaver Builder Templates slow down my website? =
 
 Absolutely no! The WPZOOM Beaver Builder Templates only serves additional custom templates to Beaver Builder page builder interface, so it is not slowing down your website at all. Therefore, it will not affect your website speed and performance in any way.
 
