@@ -17,7 +17,7 @@ This plugin provides a collection of custom [**Beaver Builder** page builder](ht
 
 It is very easy to use and you do not need to write any code. To contribute improve this plugin, please access the [GitHub repository](https://github.com/wpzoom/wpzoom-beaver-builder-templates).
 
-The plugin works great with [**Beaver Builder Addons by WPZOOM** plugin](https://wordpress.org/plugins/wpzoom-addons-for-beaver-builder/).
+The plugin works great with [**WPZOOM Addons for Beaver Builder** plugin](https://wordpress.org/plugins/wpzoom-addons-for-beaver-builder/).
 
 = Features =
 
@@ -49,7 +49,7 @@ The WPZOOM Beaver Builder Templates is a collection of unique and creative templ
 
 = What are the requirements to use the WPZOOM Beaver Builder Templates? =
 
-You only need to have the [**Beaver Builder** page builder](https://www.wpbeaverbuilder.com/) and [**Beaver Builder Addons by WPZOOM**](https://wordpress.org/plugins/wpzoom-addons-for-beaver-builder/) plugins installed and activated first.
+You only need to have the [**Beaver Builder** page builder](https://www.wpbeaverbuilder.com/) and [**WPZOOM Addons for Beaver Builder**](https://wordpress.org/plugins/wpzoom-addons-for-beaver-builder/) plugins installed and activated first.
 
 = What themes does the WPZOOM Beaver Builder Templates work with? =
 
