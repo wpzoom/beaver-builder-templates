@@ -13,7 +13,7 @@ Tags:              beaver builder, beaver builder templates, page builder templa
 
 == Description ==
 
-This plugin provides a collection of custom [**Beaver Builder** page builder](https://www.wpbeaverbuilder.com/) templates that can make your job extremely easy to create a beautiful interface of the pages or posts on your WordPress site (especially the accessibility ready themes by [WPZOOM](https://www.wpzoom.com/)).
+This plugin provides a collection of custom [**Beaver Builder** page builder](https://www.wpbeaverbuilder.com/) templates that can make your job extremely easy to create a beautiful interface of the pages or posts on your WordPress site.
 
 It is very easy to use and you do not need to write any code. To contribute improve this plugin, please access the [GitHub repository](https://github.com/wpzoom/wpzoom-beaver-builder-templates).
 

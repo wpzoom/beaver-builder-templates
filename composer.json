@@ -1,6 +1,6 @@
 {
     "name": "wpzoom/beaver-builder-templates",
-    "description": "This plugin provides a collection of custom Beaver Builder page builder templates for WordPress themes (especially the accessibility ready themes by WPZOOM).",
+    "description": "This plugin provides a collection of custom Beaver Builder page builder templates for WordPress themes.",
     "type": "wordpress-plugin",
     "license": "GPL-2.0-or-later",
     "authors": [
