@@ -3,7 +3,7 @@
  * Plugin Name:         WPZOOM Beaver Builder Templates
  * Plugin URI:          https://wordpress.org/plugins/wpzoom-beaver-builder-templates/
  * Description:         This plugin provides a collection of custom Beaver Builder page builder templates for WordPress themes (especially for WPZOOM themes).
- * Version:             1.0.0
+ * Version:             1.0.1
  * Author:              WPZOOM
  * Author URI:          https://www.wpzoom.com/
  * Text Domain:         bb-templates
