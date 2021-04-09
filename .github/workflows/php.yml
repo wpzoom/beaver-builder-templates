@@ -28,6 +28,15 @@ jobs:
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
+      
+    - name: Format PHP
+      run: composer run-script format
+      
+    - name: Lint PHP
+      run: composer run-script lint
+      
+    - name: Analyse PHP Standards
+      run: composer run-script phpstan
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
