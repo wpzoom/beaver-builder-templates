@@ -13,6 +13,14 @@
         "email": "petru@wpzoom.com"
       }
   ],
+  "require": {
+		"php": ">=7.1"
+	},
+	"config": {
+		"platform": {
+			"php": "7.1"
+		}
+	},
   "require-dev": {
     "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
     "wp-coding-standards/wpcs": "^2.3.0",
@@ -22,8 +30,8 @@
     "szepeviktor/phpstan-wordpress": "^0.6.6"
   },
   "scripts": {
-    "phpcbf": "@php ./vendor/bin/phpcbf",
-    "phpcs": "@php ./vendor/bin/phpcs",
+    "format": "@php ./vendor/bin/phpcbf",
+    "lint": "@php ./vendor/bin/phpcs",
     "phpstan": "@php vendor/bin/phpstan analyse"
   }
 }
